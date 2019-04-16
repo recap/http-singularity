@@ -13,7 +13,7 @@ From: ubuntu:16.04
    echo "LD_LIBRARY_PATH: $LD_LIBRARY_PATH"
    echo "PATH: $PATH"
    echo "Arguments received: $*"
-   bash -c "exec -a singularityHTTPServer $@"
+   exec "$@"
 %post
    # commands to be executed inside container during bootstrap
    apt-get update && apt-get install -y python wget
