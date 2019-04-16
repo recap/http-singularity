@@ -16,5 +16,5 @@ From: ubuntu:16.04
    exec "$@"
 %post
    # commands to be executed inside container during bootstrap
-   apt-get update && apt-get install -y python
+   apt-get update && apt-get install -y python wget
    
